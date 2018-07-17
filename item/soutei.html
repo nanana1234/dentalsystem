@@ -1,0 +1,21 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">想定鑑別疾患</font><br></p>
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt7" style="font-size:120%;width:100%;height:40%" placeholder="このシナリオで示した症状と似たような症状を呈する疾患で、とくに鑑別させる必要がある疾患があれば記入して下さい。"></textarea></p>
+      <!-- <input type="button" value="反映" onClick="sendData()"> -->
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      sessionStorage.setItem('txt7',document.js.txt7.value);
+    }
+    window.onload=function(){
+      document.js.txt7.value=sessionStorage.getItem('txt7');
+    }
+    </script>
+  </body>
+</html>

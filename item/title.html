@@ -1,0 +1,21 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">タイトル</font><br></p>
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt0" style="font-size:120%;width:100%;height:40%" placeholder="シナリオタイトルを入力"></textarea></p>
+      <!-- <input type="button" value="反映" onClick="sendData()"> -->
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      sessionStorage.setItem('txt0',document.js.txt0.value);
+    }
+    window.onload=function(){
+      document.js.txt0.value=sessionStorage.getItem('txt0');
+    }
+    </script>
+  </body>
+</html>

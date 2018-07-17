@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p>現病歴</p>
+      <textarea type="text" value="" name="txt2" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+      <p>解釈モデル</p>
+      <textarea type="text" value="" name="txt3" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+      <p>受療行動</p>
+      <textarea type="text" value="" name="txt4" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+    </form>
+
+  <script type="text/javascript">
+  window.onload=function(){
+    var txt4="";
+    var txt5="";
+    var txt6="";
+
+    if(sessionStorage.getItem('txt4')!=null) txt4=sessionStorage.getItem('txt4');
+    if(sessionStorage.getItem('txt5')!=null) txt5=sessionStorage.getItem('txt5');
+    if(sessionStorage.getItem('txt6')!=null) txt6=sessionStorage.getItem('txt6');
+
+    document.js.txt2.value=txt4+"\n\n";
+    document.js.txt3.value=txt5+"\n\n";
+    document.js.txt4.value=txt6+"\n\n";
+  }
+
+  </script>
+  </body>
+</html>

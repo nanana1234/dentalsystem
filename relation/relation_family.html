@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p>既往歴</p>
+      <textarea type="text" value="" name="txt8" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+      <p>患者背景</p>
+      <textarea type="text" value="" name="txt9" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+    </form>
+
+  <script type="text/javascript">
+  window.onload=function(){
+    var txt8="";
+    var txt9="";
+    var txt10="";
+
+    if(sessionStorage.getItem('txt8')!=null) txt8=sessionStorage.getItem('txt8');
+    if(sessionStorage.getItem('txt9')!=null) txt9=sessionStorage.getItem('txt9');
+
+    document.js.txt8.value=txt8+"\n\n";
+    document.js.txt9.value=txt9+"\n\n";
+  }
+
+  </script>
+  </body>
+</html>

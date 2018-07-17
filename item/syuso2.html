@@ -1,0 +1,336 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">主訴</font><br></p>
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <p>【どこ】</p>
+      <select name="txt3_a" id="select1" onchange="fCopy(this.form)">
+        <option value="a0">▼選択してください</option>
+        <option value="a1">（空欄）</option>
+        <!-- <option value="a2">（自由記載）</option> -->
+        <option value="a3">上</option>
+        <option value="a4">右側</option>
+        <option value="a5">オトガイ部</option>
+        <option value="a6">下顎</option>
+        <option value="a7">下顎</option>
+        <option value="a8">顎関節部</option>
+        <option value="a9">顎下三角部</option>
+        <option value="a10">眼窩下部</option>
+        <option value="a11">眼窩部</option>
+        <option value="a12">臼歯部</option>
+        <option value="a13">頬骨部</option>
+        <option value="a14">胸鎖乳突筋部</option>
+        <option value="a15">頬側</option>
+        <option value="a16">頬部</option>
+        <option value="a17">口</option>
+        <option value="a18">口蓋側</option>
+        <option value="a19">咬筋部</option>
+        <option value="a20">咬筋部</option>
+        <option value="a21">甲状腺部</option>
+        <option value="a22">喉頭部</option>
+        <option value="a23">左側</option>
+        <option value="a24">耳介部</option>
+        <option value="a25">下</option>
+        <option value="a26">上顎</option>
+        <option value="a27">上顎</option>
+        <option value="a28">正中</option>
+        <option value="a29">舌</option>
+        <option value="a30">舌下部</option>
+        <option value="a31">舌骨部</option>
+        <option value="a32">舌根</option>
+        <option value="a33">舌尖部</option>
+        <option value="a34">舌側</option>
+        <option value="a35">舌側縁</option>
+        <option value="a36">舌背</option>
+        <option value="a37">前歯部</option>
+        <option value="a38">全体</option>
+        <option value="a39">側頭部</option>
+        <option value="a40">頭頂部</option>
+        <option value="a41">左上</option>
+        <option value="a42">左下</option>
+        <option value="a43">鼻部</option>
+        <option value="a44">右上</option>
+        <option value="a45">右下</option>
+        <option value="a46">顎</option>
+      </select>
+
+      <p>接続詞1</p>
+      <select name="txt3_b" id="select2" onchange="fCopy(this.form)">
+        <option value="b0">▼選択してください</option>
+        <option value="b1">(空欄)</option>
+        <!-- <option value="b2">(自由記載)</option> -->
+        <option value="b3">が</option>
+        <option value="b4">の</option>
+      </select>
+
+      <p>【何】</p>
+      <select name="txt3_c" id="select3" onchange="fCopy(this.form)">
+        <option value="c0">▼選択してください</option>
+        <option value="c1">（空欄）</option>
+        <!-- <option value="c2">（自由記載）</option> -->
+        <option value="c3">入れ歯</option>
+        <option value="c4">下唇小帯</option>
+        <option value="c5">噛み合わせ</option>
+        <option value="c6">頬小帯</option>
+        <option value="c7">頬粘膜</option>
+        <option value="c8">唇</option>
+        <option value="c9">口蓋</option>
+        <option value="c10">口蓋垂</option>
+        <option value="c11">口角</option>
+        <option value="c12">口底</option>
+        <option value="c13">歯周病</option>
+        <option value="c14">歯肉</option>
+        <option value="c15">上唇小帯</option>
+        <option value="c16">小帯</option>
+        <option value="c17">舌小帯</option>
+        <option value="c18">装置</option>
+        <option value="c19">軟口蓋</option>
+        <option value="c20">歯</option>
+        <option value="c21">歯並び</option>
+        <option value="c22">ヒダ</option>
+        <option value="c23">扁桃</option>
+        <option value="c24">骨</option>
+        <option value="c25">むし歯</option>
+        <option value="c26">永久歯</option>
+        <option value="c27">乳歯</option>
+      </select>
+
+      <p>接続詞2</p>
+      <select name="txt3_d" id="select4" onchange="fCopy(this.form)">
+        <option value="d0">▼選択してください</option>
+        <option value="d1">(空欄)</option>
+        <!-- <option value="d2">(自由記載)</option> -->
+        <option value="d3">が</option>
+        <option value="d4">から</option>
+        <option value="d5">に</option>
+      </select>
+
+      <p>【どうした】</p>
+      <select name="txt3_e" id="select5" onchange="fCopy(this.form)">
+        <option value="e0">▼選択してください</option>
+        <option value="e1">（空欄）</option>
+        <!-- <option value="e2">（自由記載）</option> -->
+        <option value="e3">赤くなっている</option>
+        <option value="e4">あかない</option>
+        <option value="e5">あたる</option>
+        <option value="e6">痛い</option>
+        <option value="e7">色がおかしい</option>
+        <option value="e8">多い</option>
+        <option value="e9">おかしい</option>
+        <option value="e10">折れた</option>
+        <option value="e11">硬いものがある</option>
+        <option value="e12">形がおかしい</option>
+        <option value="e13">咬めない</option>
+        <option value="e14">乾く</option>
+        <option value="e15">ガンガンする</option>
+        <option value="e16">黄色くなっている</option>
+        <option value="e17">切れた</option>
+        <option value="e18">黒くなっている</option>
+        <option value="e19">壊れた</option>
+        <option value="e20">ザラザラする</option>
+        <option value="e21">しっくりこない</option>
+        <option value="e22">白くなっている</option>
+        <option value="e23">心配だ</option>
+        <option value="e24">ズキズキする</option>
+        <option value="e25">高い</option>
+        <option value="e26">ただれている</option>
+        <option value="e27">食べられない</option>
+        <option value="e28">足りない</option>
+        <option value="e29">血が出た</option>
+        <option value="e30">出ている</option>
+        <option value="e31">とがっている</option>
+        <option value="e32">閉じられない</option>
+        <option value="e33">とれた</option>
+        <option value="e34">とれない</option>
+        <option value="e35">治したい</option>
+        <option value="e36">なくなった</option>
+        <option value="e37">抜けない</option>
+        <option value="e38">のみ込めない</option>
+        <option value="e39">生えてこない</option>
+        <option value="e40">はずせない</option>
+        <option value="e41">外れた</option>
+        <option value="e42">はずれた</option>
+        <option value="e43">腫れた</option>
+        <option value="e44">低い</option>
+        <option value="e45">引っ込んでいる</option>
+        <option value="e46">ヒリヒリする</option>
+        <option value="e47">ピリピリする</option>
+        <option value="e48">膨らんだ</option>
+        <option value="e49">ぶつけた</option>
+        <option value="e50">ブツブツができた</option>
+        <option value="e51">変形してきた</option>
+        <option value="e52">紫色になっている</option>
+        <option value="e53">ヤケドした</option>
+        <option value="e54">悪い</option>
+        <option value="e55">悪くなった</option>
+        <option value="e56">割れた</option>
+      </select>
+
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      //select1
+      if(document.getElementById("select1").value=="a1") sessionStorage.setItem("txt3_a"," ");
+      //else if(document.getElementById("select1").value=="a2" sessionStorage.setItem("txt3_a","（自由記載）");
+      else if(document.getElementById("select1").value=="a3") sessionStorage.setItem("txt3_a","上");
+      else if(document.getElementById("select1").value=="a4") sessionStorage.setItem("txt3_a","右側");
+      else if(document.getElementById("select1").value=="a5") sessionStorage.setItem("txt3_a","オトガイ部");
+      else if(document.getElementById("select1").value=="a6") sessionStorage.setItem("txt3_a","下顎");
+      else if(document.getElementById("select1").value=="a7") sessionStorage.setItem("txt3_a","下顎");
+      else if(document.getElementById("select1").value=="a8") sessionStorage.setItem("txt3_a","顎関節部");
+      else if(document.getElementById("select1").value=="a9") sessionStorage.setItem("txt3_a","顎下三角部");
+      else if(document.getElementById("select1").value=="a10") sessionStorage.setItem("txt3_a","眼窩下部");
+      else if(document.getElementById("select1").value=="a11") sessionStorage.setItem("txt3_a","眼窩部");
+      else if(document.getElementById("select1").value=="a12") sessionStorage.setItem("txt3_a","臼歯部");
+      else if(document.getElementById("select1").value=="a13") sessionStorage.setItem("txt3_a","頬骨部");
+      else if(document.getElementById("select1").value=="a14") sessionStorage.setItem("txt3_a","胸鎖乳突筋部");
+      else if(document.getElementById("select1").value=="a15") sessionStorage.setItem("txt3_a","頬側");
+      else if(document.getElementById("select1").value=="a16") sessionStorage.setItem("txt3_a","頬部");
+      else if(document.getElementById("select1").value=="a17") sessionStorage.setItem("txt3_a","口");
+      else if(document.getElementById("select1").value=="a18") sessionStorage.setItem("txt3_a","口蓋側");
+      else if(document.getElementById("select1").value=="a19") sessionStorage.setItem("txt3_a","咬筋部");
+      else if(document.getElementById("select1").value=="a20") sessionStorage.setItem("txt3_a","咬筋部");
+      else if(document.getElementById("select1").value=="a21") sessionStorage.setItem("txt3_a","甲状腺部");
+      else if(document.getElementById("select1").value=="a22") sessionStorage.setItem("txt3_a","喉頭部");
+      else if(document.getElementById("select1").value=="a23") sessionStorage.setItem("txt3_a","左側");
+      else if(document.getElementById("select1").value=="a24") sessionStorage.setItem("txt3_a","耳介部");
+      else if(document.getElementById("select1").value=="a25") sessionStorage.setItem("txt3_a","下");
+      else if(document.getElementById("select1").value=="a26") sessionStorage.setItem("txt3_a","上顎");
+      else if(document.getElementById("select1").value=="a27") sessionStorage.setItem("txt3_a","上顎");
+      else if(document.getElementById("select1").value=="a28") sessionStorage.setItem("txt3_a","正中");
+      else if(document.getElementById("select1").value=="a29") sessionStorage.setItem("txt3_a","舌");
+      else if(document.getElementById("select1").value=="a30") sessionStorage.setItem("txt3_a","舌下部");
+      else if(document.getElementById("select1").value=="a31") sessionStorage.setItem("txt3_a","舌骨部");
+      else if(document.getElementById("select1").value=="a32") sessionStorage.setItem("txt3_a","舌根");
+      else if(document.getElementById("select1").value=="a33") sessionStorage.setItem("txt3_a","舌尖部");
+      else if(document.getElementById("select1").value=="a34") sessionStorage.setItem("txt3_a","舌側");
+      else if(document.getElementById("select1").value=="a35") sessionStorage.setItem("txt3_a","舌側縁");
+      else if(document.getElementById("select1").value=="a36") sessionStorage.setItem("txt3_a","舌背");
+      else if(document.getElementById("select1").value=="a37") sessionStorage.setItem("txt3_a","前歯部");
+      else if(document.getElementById("select1").value=="a38") sessionStorage.setItem("txt3_a","全体");
+      else if(document.getElementById("select1").value=="a39") sessionStorage.setItem("txt3_a","側頭部");
+      else if(document.getElementById("select1").value=="a40") sessionStorage.setItem("txt3_a","頭頂部");
+      else if(document.getElementById("select1").value=="a41") sessionStorage.setItem("txt3_a","左上");
+      else if(document.getElementById("select1").value=="a42") sessionStorage.setItem("txt3_a","左下");
+      else if(document.getElementById("select1").value=="a43") sessionStorage.setItem("txt3_a","鼻部");
+      else if(document.getElementById("select1").value=="a44") sessionStorage.setItem("txt3_a","右上");
+      else if(document.getElementById("select1").value=="a45") sessionStorage.setItem("txt3_a","右下");
+      else if(document.getElementById("select1").value=="a46") sessionStorage.setItem("txt3_a","顎");
+
+
+      //select2
+      if(document.getElementById("select2").value=="b1") sessionStorage.setItem("txt3_b"," ");
+      //else if(document.getElementById("select2").value=="b2" sessionStorage.setItem("txt3_b","（自由記載）");
+      else if(document.getElementById("select2").value=="b3") sessionStorage.setItem("txt3_b","が");
+      else if(document.getElementById("select2").value=="b4") sessionStorage.setItem("txt3_b","の");
+
+      //select3
+      if(document.getElementById("select3").value=="c1") sessionStorage.setItem("txt3_c"," ");
+      //else if(document.getElementById("select3").value=="c2" sessionStorage.setItem("txt3_c","（自由記載）");
+      else if(document.getElementById("select3").value=="c3") sessionStorage.setItem("txt3_c","入れ歯");
+      else if(document.getElementById("select3").value=="c4") sessionStorage.setItem("txt3_c","下唇小帯");
+      else if(document.getElementById("select3").value=="c5") sessionStorage.setItem("txt3_c","噛み合わせ");
+      else if(document.getElementById("select3").value=="c6") sessionStorage.setItem("txt3_c","頬小帯");
+      else if(document.getElementById("select3").value=="c7") sessionStorage.setItem("txt3_c","頬粘膜");
+      else if(document.getElementById("select3").value=="c8") sessionStorage.setItem("txt3_c","唇");
+      else if(document.getElementById("select3").value=="c9") sessionStorage.setItem("txt3_c","口蓋");
+      else if(document.getElementById("select3").value=="c10") sessionStorage.setItem("txt3_c","口蓋垂");
+      else if(document.getElementById("select3").value=="c11") sessionStorage.setItem("txt3_c","口角");
+      else if(document.getElementById("select3").value=="c12") sessionStorage.setItem("txt3_c","口底");
+      else if(document.getElementById("select3").value=="c13") sessionStorage.setItem("txt3_c","歯周病");
+      else if(document.getElementById("select3").value=="c14") sessionStorage.setItem("txt3_c","歯肉");
+      else if(document.getElementById("select3").value=="c15") sessionStorage.setItem("txt3_c","上唇小帯");
+      else if(document.getElementById("select3").value=="c16") sessionStorage.setItem("txt3_c","小帯");
+      else if(document.getElementById("select3").value=="c17") sessionStorage.setItem("txt3_c","舌小帯");
+      else if(document.getElementById("select3").value=="c18") sessionStorage.setItem("txt3_c","装置");
+      else if(document.getElementById("select3").value=="c19") sessionStorage.setItem("txt3_c","軟口蓋");
+      else if(document.getElementById("select3").value=="c20") sessionStorage.setItem("txt3_c","歯");
+      else if(document.getElementById("select3").value=="c21") sessionStorage.setItem("txt3_c","歯並び");
+      else if(document.getElementById("select3").value=="c22") sessionStorage.setItem("txt3_c","ヒダ");
+      else if(document.getElementById("select3").value=="c23") sessionStorage.setItem("txt3_c","扁桃");
+      else if(document.getElementById("select3").value=="c24") sessionStorage.setItem("txt3_c","骨");
+      else if(document.getElementById("select3").value=="c25") sessionStorage.setItem("txt3_c","むし歯");
+      else if(document.getElementById("select3").value=="c26") sessionStorage.setItem("txt3_c","永久歯");
+      else if(document.getElementById("select3").value=="c27") sessionStorage.setItem("txt3_c","乳歯");
+
+
+      //select4
+      if(document.getElementById("select4").value=="d1") sessionStorage.setItem("txt3_d"," ");
+      //else if(document.getElementById("select4").value=="d2" sessionStorage.setItem("txt3_d","（自由記載）");
+      else if(document.getElementById("select4").value=="d3") sessionStorage.setItem("txt3_d","が");
+      else if(document.getElementById("select4").value=="d4") sessionStorage.setItem("txt3_d","から");
+      else if(document.getElementById("select4").value=="d5") sessionStorage.setItem("txt3_d","に");
+
+
+      //select5
+      if(document.getElementById("select5").value=="e1") sessionStorage.setItem("txt3_e"," ");
+      //else if(document.getElementById("select5").value=="e2" sessionStorage.setItem("txt3_e","（自由記載）");
+      else if(document.getElementById("select5").value=="e3") sessionStorage.setItem("txt3_e","赤くなっている");
+      else if(document.getElementById("select5").value=="e4") sessionStorage.setItem("txt3_e","あかない");
+      else if(document.getElementById("select5").value=="e5") sessionStorage.setItem("txt3_e","あたる");
+      else if(document.getElementById("select5").value=="e6") sessionStorage.setItem("txt3_e","痛い");
+      else if(document.getElementById("select5").value=="e7") sessionStorage.setItem("txt3_e","色がおかしい");
+      else if(document.getElementById("select5").value=="e8") sessionStorage.setItem("txt3_e","多い");
+      else if(document.getElementById("select5").value=="e9") sessionStorage.setItem("txt3_e","おかしい");
+      else if(document.getElementById("select5").value=="e10") sessionStorage.setItem("txt3_e","折れた");
+      else if(document.getElementById("select5").value=="e11") sessionStorage.setItem("txt3_e","硬いものがある");
+      else if(document.getElementById("select5").value=="e12") sessionStorage.setItem("txt3_e","形がおかしい");
+      else if(document.getElementById("select5").value=="e13") sessionStorage.setItem("txt3_e","咬めない");
+      else if(document.getElementById("select5").value=="e14") sessionStorage.setItem("txt3_e","乾く");
+      else if(document.getElementById("select5").value=="e15") sessionStorage.setItem("txt3_e","ガンガンする");
+      else if(document.getElementById("select5").value=="e16") sessionStorage.setItem("txt3_e","黄色くなっている");
+      else if(document.getElementById("select5").value=="e17") sessionStorage.setItem("txt3_e","切れた");
+      else if(document.getElementById("select5").value=="e18") sessionStorage.setItem("txt3_e","黒くなっている");
+      else if(document.getElementById("select5").value=="e19") sessionStorage.setItem("txt3_e","壊れた");
+      else if(document.getElementById("select5").value=="e20") sessionStorage.setItem("txt3_e","ザラザラする");
+      else if(document.getElementById("select5").value=="e21") sessionStorage.setItem("txt3_e","しっくりこない");
+      else if(document.getElementById("select5").value=="e22") sessionStorage.setItem("txt3_e","白くなっている");
+      else if(document.getElementById("select5").value=="e23") sessionStorage.setItem("txt3_e","心配だ");
+      else if(document.getElementById("select5").value=="e24") sessionStorage.setItem("txt3_e","ズキズキする");
+      else if(document.getElementById("select5").value=="e25") sessionStorage.setItem("txt3_e","高い");
+      else if(document.getElementById("select5").value=="e26") sessionStorage.setItem("txt3_e","ただれている");
+      else if(document.getElementById("select5").value=="e27") sessionStorage.setItem("txt3_e","食べられない");
+      else if(document.getElementById("select5").value=="e28") sessionStorage.setItem("txt3_e","足りない");
+      else if(document.getElementById("select5").value=="e29") sessionStorage.setItem("txt3_e","血が出た");
+      else if(document.getElementById("select5").value=="e30") sessionStorage.setItem("txt3_e","出ている");
+      else if(document.getElementById("select5").value=="e31") sessionStorage.setItem("txt3_e","とがっている");
+      else if(document.getElementById("select5").value=="e32") sessionStorage.setItem("txt3_e","閉じられない");
+      else if(document.getElementById("select5").value=="e33") sessionStorage.setItem("txt3_e","とれた");
+      else if(document.getElementById("select5").value=="e34") sessionStorage.setItem("txt3_e","とれない");
+      else if(document.getElementById("select5").value=="e35") sessionStorage.setItem("txt3_e","治したい");
+      else if(document.getElementById("select5").value=="e36") sessionStorage.setItem("txt3_e","なくなった");
+      else if(document.getElementById("select5").value=="e37") sessionStorage.setItem("txt3_e","抜けない");
+      else if(document.getElementById("select5").value=="e38") sessionStorage.setItem("txt3_e","のみ込めない");
+      else if(document.getElementById("select5").value=="e39") sessionStorage.setItem("txt3_e","生えてこない");
+      else if(document.getElementById("select5").value=="e40") sessionStorage.setItem("txt3_e","はずせない");
+      else if(document.getElementById("select5").value=="e41") sessionStorage.setItem("txt3_e","外れた");
+      else if(document.getElementById("select5").value=="e42") sessionStorage.setItem("txt3_e","はずれた");
+      else if(document.getElementById("select5").value=="e43") sessionStorage.setItem("txt3_e","腫れた");
+      else if(document.getElementById("select5").value=="e44") sessionStorage.setItem("txt3_e","低い");
+      else if(document.getElementById("select5").value=="e45") sessionStorage.setItem("txt3_e","引っ込んでいる");
+      else if(document.getElementById("select5").value=="e46") sessionStorage.setItem("txt3_e","ヒリヒリする");
+      else if(document.getElementById("select5").value=="e47") sessionStorage.setItem("txt3_e","ピリピリする");
+      else if(document.getElementById("select5").value=="e48") sessionStorage.setItem("txt3_e","膨らんだ");
+      else if(document.getElementById("select5").value=="e49") sessionStorage.setItem("txt3_e","ぶつけた");
+      else if(document.getElementById("select5").value=="e50") sessionStorage.setItem("txt3_e","ブツブツができた");
+      else if(document.getElementById("select5").value=="e51") sessionStorage.setItem("txt3_e","変形してきた");
+      else if(document.getElementById("select5").value=="e52") sessionStorage.setItem("txt3_e","紫色になっている");
+      else if(document.getElementById("select5").value=="e53") sessionStorage.setItem("txt3_e","ヤケドした");
+      else if(document.getElementById("select5").value=="e54") sessionStorage.setItem("txt3_e","悪い");
+      else if(document.getElementById("select5").value=="e55") sessionStorage.setItem("txt3_e","悪くなった");
+      else if(document.getElementById("select5").value=="e56") sessionStorage.setItem("txt3_e","割れた");
+
+    }
+    /*
+    選んでいる選択肢を保存したいけどやり方わからない
+    window.onload=function(){
+      document.js.txt3_a.value=sessionStorage.getItem('txt3_a');
+      document.js.txt3_b.value=sessionStorage.getItem('txt3_b');
+    }
+    */
+    </script>
+  </body>
+</html>

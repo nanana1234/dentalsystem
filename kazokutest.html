@@ -1,0 +1,87 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">家族歴</font><br></p>
+      <input type="checkbox" name="check_f" value="father">父</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_f" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_m" value="mother">母</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_m" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_gf" value="g_father">祖父</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_gf" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_gm" value="g_mother">祖母</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_gm" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_ob" value="o_brother">兄</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_ob" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_yb" value="y_brother">弟</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_yb" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_os" value="o_sister">姉</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_os" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_ys" value="y_sister">妹</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_ys" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_s" value="y_sister">息子</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_s" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_d" value="y_sister">娘</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_d" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+      <input type="checkbox" name="check_gs" value="y_sister">孫</input>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_gs" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></textarea>
+    </form>
+
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      var c_f=document.js.check_f.checked;
+      var c_m=document.js.check_m.checked;
+      var c_gf=document.js.check_gf.checked;
+      var c_gm=document.js.check_gm.checked;
+      var c_ob=document.js.check_ob.checked;
+      var c_yb=document.js.check_yb.checked;
+      var c_os=document.js.check_os.checked;
+      var c_ys=document.js.check_ys.checked;
+      var c_s=document.js.check_s.checked;
+      var c_d=document.js.check_d.checked;
+      var c_gs=document.js.check_gs.checked;
+
+      if(c_f===true)
+      sessionStorage.setItem('txt10_f',document.js.txt10_f.value);
+      if(c_m===true)
+      sessionStorage.setItem('txt10_m',document.js.txt10_m.value);
+      if(c_gf===true)
+      sessionStorage.setItem('txt10_gf',document.js.txt10_gf.value);
+      if(c_gm===true)
+      sessionStorage.setItem('txt10_gm',document.js.txt10_gm.value);
+      if(c_ob===true)
+      sessionStorage.setItem('txt10_ob',document.js.txt10_ob.value);
+      if(c_yb===true)
+      sessionStorage.setItem('txt10_yb',document.js.txt10_yb.value);
+      if(c_os===true)
+      sessionStorage.setItem('txt10_os',document.js.txt10_os.value);
+      if(c_ys===true)
+      sessionStorage.setItem('txt10_ys',document.js.txt10_ys.value);
+      if(c_s===true)
+      sessionStorage.setItem('txt10_s',document.js.txt10_s.value);
+      if(c_d===true)
+      sessionStorage.setItem('txt10_d',document.js.txt10_d.value);
+      if(c_gs===true)
+      sessionStorage.setItem('txt10_gs',document.js.txt10_gs.value);
+
+      if(c_f==false && c_m==false && c_gf==false && c_gm==false c_ob==false && c_yb==false && c_os==false && c_ys==false && c_s==false && c_d==false && c_gs==false)
+      sessionStorage.setItem('txt10','特になし。家族はみんな元気。');
+    }
+    window.onload=function(){
+      document.js.txt10_f.value=sessionStorage.getItem('txt10_f');
+      document.js.txt10_m.value=sessionStorage.getItem('txt10_m');
+      document.js.txt10_gf.value=sessionStorage.getItem('txt10_gf');
+      document.js.txt10_gm.value=sessionStorage.getItem('txt10_gm');
+      document.js.txt10_ob.value=sessionStorage.getItem('txt10_ob');
+      document.js.txt10_yb.value=sessionStorage.getItem('txt10_yb');
+      document.js.txt10_os.value=sessionStorage.getItem('txt10_os');
+      document.js.txt10_ys.value=sessionStorage.getItem('txt10_ys');
+      document.js.txt10_s.value=sessionStorage.getItem('txt10_s');
+      document.js.txt10_d.value=sessionStorage.getItem('txt10_d');
+      document.js.txt10_gs.value=sessionStorage.getItem('txt10_gs');
+    }
+    </script>
+  </body>
+</html>

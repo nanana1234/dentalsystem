@@ -1,0 +1,157 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    function connecttext(textid,ischecked){
+      if(ischecked==true){
+        //チェックが入っていたら有効化
+        document.getElementById(textid).disabled=false;
+      }else{
+        //チェックが入っていなかったら無効化
+        document.getElementById(textid).disabled=true;
+      }
+    }
+
+    function fCopy(frmObj){
+      var c_f=document.js.check_f.checked;
+      var c_m=document.js.check_m.checked;
+      var c_gf=document.js.check_gf.checked;
+      var c_gm=document.js.check_gm.checked;
+      var c_ob=document.js.check_ob.checked;
+      var c_yb=document.js.check_yb.checked;
+      var c_os=document.js.check_os.checked;
+      var c_ys=document.js.check_ys.checked;
+      var c_s=document.js.check_s.checked;
+      var c_d=document.js.check_d.checked;
+      var c_gs=document.js.check_gs.checked;
+
+      /*
+      if(c_f===true)
+      sessionStorage.setItem('txt10_f',"父は"+document.js.txt10_f.value);
+      if(c_m===true)
+      sessionStorage.setItem('txt10_m',"母は"+document.js.txt10_m.value);
+      if(c_gf===true)
+      sessionStorage.setItem('txt10_gf',"祖父は"+document.js.txt10_gf.value);
+      if(c_gm===true)
+      sessionStorage.setItem('txt10_gm',"祖母は"+document.js.txt10_gm.value);
+      if(c_ob===true)
+      sessionStorage.setItem('txt10_ob',"兄は"+document.js.txt10_ob.value);
+      if(c_yb===true)
+      sessionStorage.setItem('txt10_yb',"弟は"+document.js.txt10_yb.value);
+      if(c_os===true)
+      sessionStorage.setItem('txt10_os',"姉は"+document.js.txt10_os.value);
+      if(c_ys===true)
+      sessionStorage.setItem('txt10_ys',"妹は"+document.js.txt10_ys.value);
+      if(c_s===true)
+      sessionStorage.setItem('txt10_s',"息子は"+document.js.txt10_s.value);
+      if(c_d===true)
+      sessionStorage.setItem('txt10_d',"娘は"+document.js.txt10_d.value);
+      if(c_gs===true)
+      sessionStorage.setItem('txt10_gs',"孫は"+document.js.txt10_gs.value);
+    }
+    */
+
+    var t_f="父は"+document.js.txt10_f.value;
+    var t_m="母は"+document.js.txt10_m.value;
+    var t_gf="祖父は"+document.js.txt10_gf.value;
+    var t_gm="祖母は"+document.js.txt10_gm.value;
+    var t_ob="兄は"+document.js.txt10_ob.value;
+    var t_yb="弟は"+document.js.txt10_yb.value;
+    var t_os="姉は"+document.js.txt10_os.value;
+    var t_ys="妹は"+document.js.txt10_ys.value;
+    var t_s="息子は"+document.js.txt10_s.value;
+    var t_d="娘は"+document.js.txt10_d.value;
+    var t_gs="孫は"+document.js.txt10_gs.value;
+
+    var txt10="";
+
+    if(c_f===true)
+    txt10=txt10+t_f+"\n";
+    if(c_m===true)
+    txt10=txt10+t_m+"\n";
+    if(c_gf===true)
+    txt10=txt10+t_gf+"\n";
+    if(c_gm===true)
+    txt10=txt10+t_gm+"\n";
+    if(c_ob===true)
+    txt10=txt10+t_ob+"\n";
+    if(c_yb===true)
+    txt10=txt10+t_yb+"\n";
+    if(c_os===true)
+    txt10=txt10+t_os+"\n";
+    if(c_ys===true)
+    txt10=txt10+t_ys+"\n";
+    if(c_s===true)
+    txt10=txt10+t_s+"\n";
+    if(c_d===true)
+    txt10=txt10+t_d+"\n";
+    if(c_gs===true)
+    txt10=txt10+t_gs;
+
+    if(txt10==""){
+      txt10="特になし。家族はみんな元気。"
+    }
+    sessionStorage.setItem('txt10',txt10)
+
+}
+    </script>
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">家族歴</font><br></p>
+
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <!--
+      <p><font size="4">何も書かない場合は「特になし。家族はみんな元気。」と表示されます</font><br></p>
+    -->
+      <label><input type="checkbox" name="check_f" value="on" onclick="connecttext('txt10_f',this.checked)">父</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_f" id="txt10_f" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_m" value="on" onclick="connecttext('txt10_m',this.checked)">母</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_m" id="txt10_m" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_gf" value="on" onclick="connecttext('txt10_gf',this.checked)">祖父</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_gf" id="txt10_gf" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_gm" value="on" onclick="connecttext('txt10_gm',this.checked)">祖母</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_gm" id="txt10_gm" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_ob" value="on" onclick="connecttext('txt10_ob',this.checked)">兄</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_ob" id="txt10_ob" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_yb" value="on" onclick="connecttext('txt10_yb',this.checked)">弟</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_yb" id="txt10_yb" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_os" value="on" onclick="connecttext('txt10_os',this.checked)">姉</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_os" id="txt10_os" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_ys" value="on" onclick="connecttext('txt10_ys',this.checked)">妹</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_ys" id="txt10_ys" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_s" value="on" onclick="connecttext('txt10_s',this.checked)">息子</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_s" id="txt10_s" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_d" value="on" onclick="connecttext('txt10_d',this.checked)">娘</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_d" id="txt10_d" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input><br>
+
+      <label><input type="checkbox" name="check_gs" value="on" onclick="connecttext('txt10_gs',this.checked)">孫</label>
+      <input type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt10_gs" id="txt10_gs" cols="90" rows="1" style="font-size:120%;" placeholder="家族歴"></input>
+    </form>
+
+    <script type="text/javascript"><!--
+    //初期化
+    connecttext('txt10_f',false);
+    connecttext('txt10_m',false);
+    connecttext('txt10_gf',false);
+    connecttext('txt10_gm',false);
+    connecttext('txt10_ob',false);
+    connecttext('txt10_yb',false);
+    connecttext('txt10_os',false);
+    connecttext('txt10_ys',false);
+    connecttext('txt10_s',false);
+    connecttext('txt10_d',false);
+    connecttext('txt10_gs',false);
+
+    --></script>
+  </body>
+</html>

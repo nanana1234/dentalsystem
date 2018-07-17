@@ -1,0 +1,21 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">既往歴</font><br></p>
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt8" style="font-size:120%;width:100%;height:80%" placeholder="患者さんが出生してから現在までどのような疾患にかかり、どんな経過をたどったかという情報です。完治した疾患／現在治療中の疾患／経過観察中の疾患／後遺症を含みます。何らかの薬物療法を受けた／受けているという情報、食物や薬物などのアレルギー情報、入院・手術・治療・検査などの経験も含みます。「今回の受診対象となった疾病」に関するものは含みません。"></textarea></p>
+      <!-- <input type="button" value="反映" onClick="sendData()"> -->
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      sessionStorage.setItem('txt8',document.js.txt8.value);
+    }
+    window.onload=function(){
+      document.js.txt8.value=sessionStorage.getItem('txt8');
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p>氏名年齢性別のデータ</p>
+      <textarea type="text" value="" name="txt1" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+    </form>
+
+  <script type="text/javascript">
+  window.onload=function(){
+    var txt1_n="";
+    var txt1_au="";
+    var txt1_al="";
+    var txt1_s="";
+
+    if(sessionStorage.getItem('txt1_n')!=null) txt1_n=sessionStorage.getItem('txt1_n');
+    if(sessionStorage.getItem('txt1_au')!=null) txt1_au=sessionStorage.getItem('txt1_au');
+    if(sessionStorage.getItem('txt1_al')!=null) txt1_al=sessionStorage.getItem('txt1_al');
+    if(sessionStorage.getItem('txt1_s')!=null) txt1_s=sessionStorage.getItem('txt1_s');
+
+    document.js.txt1.value=txt1_n+"　"+txt1_au+txt1_al+"歳　"+txt1_s+\n\n;
+  }
+
+  </script>
+  </body>
+</html>

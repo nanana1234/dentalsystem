@@ -1,0 +1,113 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+
+  <body>
+    <form name="js">
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+    <p><font size="5">氏名</font><br></p>
+    <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt1_n" cols="20" rows="1" style="font-size:120%;"></textarea></p>
+
+    <p><font size="5">年齢</font><br></p>
+    <select name="txt1_au" id="select1" onchange="fCopy(this.form)">
+      <option value="zero_u">0</option>
+      <option value="one_u">1</option>
+      <option value="two_u">2</option>
+      <option value="three_u">3</option>
+      <option value="four_u">4</option>
+      <option value="five_u">5</option>
+      <option value="six_u">6</option>
+      <option value="seven_u">7</option>
+      <option value="eight_u">8</option>
+      <option value="nine_u">9</option>
+    </select>
+
+    <select name="txt1_al" id="select2" onchange="fCopy(this.form)">
+      <option value="zero_l">0</option>
+      <option value="one_l">1</option>
+      <option value="two_l">2</option>
+      <option value="three_l">3</option>
+      <option value="four_l">4</option>
+      <option value="five_l">5</option>
+      <option value="six_l">6</option>
+      <option value="seven_l">7</option>
+      <option value="eight_l">8</option>
+      <option value="nine_l">9</option>
+    </select>
+    <div>歳</div><br>
+
+    <p><font size="5">性別</font><br></p>
+    <select name="txt1_s" id="select3" onchange="fCopy(this.form)">
+      <option value="male">男性</option>
+      <option value="female">女性</option>
+      <option value="both">男女</option>
+    </select>
+
+  </form>
+
+  <script type="text/javascript">
+
+  function fCopy(frmObj){
+    sessionStorage.setItem('txt1_n',document.js.txt1_n.value);
+
+
+    if(document.getElementById("select1").value==='zero_u')
+    sessionStorage.setItem('txt1_au','0');
+    else if(document.getElementById("select1").value==='one_u')
+    sessionStorage.setItem('txt1_au','1');
+    else if(document.getElementById("select1").value==='two_u')
+    sessionStorage.setItem('txt1_au','2');
+    else if(document.getElementById("select1").value==='three_u')
+    sessionStorage.setItem('txt1_au','3');
+    else if(document.getElementById("select1").value==='four_u')
+    sessionStorage.setItem('txt1_au','4');
+    else if(document.getElementById("select1").value==='five_u')
+    sessionStorage.setItem('txt1_au','5');
+    else if(document.getElementById("select1").value==='six_u')
+    sessionStorage.setItem('txt1_au','6');
+    else if(document.getElementById("select1").value==='seven_u')
+    sessionStorage.setItem('txt1_au','7');
+    else if(document.getElementById("select1").value==='eight_u')
+    sessionStorage.setItem('txt1_au','8');
+    else if(document.getElementById("select1").value==='nine_u')
+    sessionStorage.setItem('txt1_au','9');
+
+    if(document.getElementById("select2").value==='zero_l')
+    sessionStorage.setItem('txt1_al','0');
+    else if(document.getElementById("select2").value==='one_l')
+    sessionStorage.setItem('txt1_al','1');
+    else if(document.getElementById("select2").value==='two_l')
+    sessionStorage.setItem('txt1_al','2');
+    else if(document.getElementById("select2").value==='three_l')
+    sessionStorage.setItem('txt1_al','3');
+    else if(document.getElementById("select2").value==='four_l')
+    sessionStorage.setItem('txt1_al','4');
+    else if(document.getElementById("select2").value==='five_l')
+    sessionStorage.setItem('txt1_al','5');
+    else if(document.getElementById("select2").value==='six_l')
+    sessionStorage.setItem('txt1_al','6');
+    else if(document.getElementById("select2").value==='seven_l')
+    sessionStorage.setItem('txt1_al','7');
+    else if(document.getElementById("select2").value==='eight_l')
+    sessionStorage.setItem('txt1_al','8');
+    else if(document.getElementById("select2").value==='nine_l')
+    sessionStorage.setItem('txt1_al','9');
+
+
+    if(document.getElementById("select3").value==='male')
+    sessionStorage.setItem('txt1_s','男性');
+    else if(document.getElementById("select3").value==='female')
+    sessionStorage.setItem('txt1_s','女性');
+    else if(document.getElementById("select3").value==='both')
+    sessionStorage.setItem('txt1_s','男女');
+  }
+
+  window.onload=function(){
+    document.js.txt1_n.value=sessionStorage.getItem('txt1_n');
+    document.js.txt1_au.value=sessionStorage.getItem('txt1_au');
+    document.js.txt1_s.value=sessionStorage.getItem('txt1_s');
+  }
+  </script>
+  </body>
+</html>

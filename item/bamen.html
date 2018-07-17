@@ -1,0 +1,50 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">場面設定</font><br></p>
+
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+
+      <select name="txt2_b" id="select1" onchange="fCopy(this.form)">
+        <option value="a">大学病院</option>
+        <option value="b">病院</option>
+        <option value="c">仮</option>
+      </select>
+
+      <select name="txt2_k" id="select2" onchange="fCopy(this.form)">
+        <option value="first">初診</option>
+        <option value="second">再診</option>
+      </select>
+
+      <!-- 備考欄 -->
+      <p><font size="3">備考欄</font><br></p>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt2_o" style="font-size:120%;width:100%;height:40%" placeholder="備考欄"></textarea></p>
+      <!-- <input type="button" value="反映" onClick="sendData()"> -->
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      if(document.getElementById("select1").value==='a')
+      sessionStorage.setItem('txt2_b','大学病院');
+      else if(document.getElementById("select1").value==='b')
+      sessionStorage.setItem('txt2_b','病院');
+      else if(document.getElementById("select1").value==='c')
+      sessionStorage.setItem('txt2_b','仮');
+
+      if(document.getElementById("select2").value==='first')
+      sessionStorage.setItem('txt2_k','初診');
+      else if(document.getElementById("select2").value==='second')
+      sessionStorage.setItem('txt2_k','再診');
+
+      sessionStorage.setItem('txt2_o',document.js.txt2_o.value);
+    }
+    window.onload=function(){
+      document.js.txt2_b.value=sessionStorage.getItem('txt2_b');
+      document.js.txt2_k.value=sessionStorage.getItem('txt2_k');
+      document.js.txt2_o.value=sessionStorage.getItem('txt2_o');
+    }
+    </script>
+  </body>
+</html>

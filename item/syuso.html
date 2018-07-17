@@ -1,0 +1,127 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">主訴</font><br></p>
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <select name="txt3_a" id="select1" onchange="fCopy(this.form)">
+        <option value="a1">(空欄)</option>
+        <option value="b1">上</option>
+        <option value="c1">右側</option>
+        <option value="d1">オトガイ部</option>
+        <option value="e1">下顎</option>
+        <option value="f1">顎関節部</option>
+        <option value="g1">顎下三角部</option>
+        <option value="h1">眼窩下部</option>
+        <option value="i1">眼窩部</option>
+        <option value="j1">臼歯部</option>
+        <option value="k1">頬骨部</option>
+        <option value="l1">胸鎖乳突筋部</option>
+        <option value="m1">頬側</option>
+        <option value="n1">頬部</option>
+        <option value="o1">口</option>
+        <option value="p1">口蓋側</option>
+        <option value="q1">咬筋部</option>
+        <option value="r1">甲状腺部</option>
+        <option value="s1">左側</option>
+        <option value="t1">耳介部</option>
+        <option value="y1">下</option>
+        <option value="v1">上顎</option>
+        <option value="w1">正中</option>
+        <option value="x1">舌</option>
+        <option value="y1">舌下部</option>
+        <option value="z1">舌骨部</option>
+        <option value="aa1">舌根</option>
+        <option value="ab1">舌尖部</option>
+        <option value="ac1">舌側</option>
+        <option value="ad1">舌側縁</option>
+        <option value="ae1">舌背</option>
+        <option value="af1">前歯部</option>
+        <option value="ag1">全体</option>
+        <option value="ah1">側頭部</option>
+        <option value="ai1">頭頂部</option>
+        <option value="aj1">左上</option>
+        <option value="ak1">左下</option>
+        <option value="al1">鼻部</option>
+        <option value="am1">右上</option>
+        <option value="an1">右下</option>
+        <option value="ao1">顎</option>
+        <option value="ap1">(自由記載)</option>
+      </select>
+
+      <select name="txt3_b" id="select2" onchange="fCopy(this.form)">
+        <option value="a2">(空欄)</option>
+        <option value="b2">が</option>
+        <option value="c2">の</option>
+        <option value="d2">(自由記載)</option>
+      </select>
+
+      <select name="txt3_c" id="select3" onchange="fCopy(this.form)">
+        <option value="aa">痛い</option>
+        <option value="bb">血が出る</option>
+      </select>
+
+      <select name="txt3_d" id="select4" onchange="fCopy(this.form)">
+        <option value="a4">(空欄)</option>
+        <option value="b4">が</option>
+        <option value="c4">から</option>
+        <option value="d4">に</option>
+        <option value="e4">(自由記載)</option>
+      </select>
+
+      <select name="txt3_e" id="select5" onchange="fCopy(this.form)">
+        <option value="aa">痛い</option>
+        <option value="bb">血が出る</option>
+      </select>
+
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      //select1
+      if(document.getElementById("select1").value==='a1')
+      sessionStorage.setItem('txt3_a','歯');
+      else if(document.getElementById("select1").value==='b1')
+      sessionStorage.setItem('txt3_a','頭');
+      else if(document.getElementById("select1").value==='c1')
+      sessionStorage.setItem('txt3_a','顎');
+
+      //select2
+      if(document.getElementById("select2").value==='a2')
+      sessionStorage.setItem('txt3_b'," ");
+      else if(document.getElementById("select2").value==='b2')
+      sessionStorage.setItem('txt3_b','が');
+      else if(document.getElementById("select2").value==='c2')
+      sessionStorage.setItem('txt3_b','の');
+      //else if(document.getElementById("select2").value==='d2')
+      //sessionStorage.setItem('txt3_b','血が出る');
+
+      //select3
+      if(document.getElementById("select3").value==='a3')
+      sessionStorage.setItem('txt3_c','痛い');
+      else if(document.getElementById("select3").value==='b3')
+      sessionStorage.setItem('txt3_c','血が出る');
+
+      //select4
+      if(document.getElementById("select4").value==='a4')
+      sessionStorage.setItem('txt3_d','痛い');
+      else if(document.getElementById("select4").value==='b4')
+      sessionStorage.setItem('txt3_d','血が出る');
+
+      //select5
+      if(document.getElementById("select5").value==='a5')
+      sessionStorage.setItem('txt3_e','痛い');
+      else if(document.getElementById("select5").value==='b5')
+      sessionStorage.setItem('txt3_e','血が出る');
+    }
+    /*
+    選んでいる選択肢を保存したいけどやり方わからない
+    window.onload=function(){
+      document.js.txt3_a.value=sessionStorage.getItem('txt3_a');
+      document.js.txt3_b.value=sessionStorage.getItem('txt3_b');
+    }
+    */
+    </script>
+  </body>
+</html>

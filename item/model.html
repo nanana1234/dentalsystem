@@ -1,0 +1,21 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">解釈モデル</font><br></p>
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt5" style="font-size:120%;width:100%;height:80%" placeholder="「今回の受診対象となった疾病」の、原因・病態・影響や治療についての希望などについて、患者さんがどう思っている／考えている／信じているのかという情報です。患者本人以外の家族・保護者などの考え方も含みます。"></textarea></p>
+      <!-- <input type="button" value="反映" onClick="sendData()"> -->
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      sessionStorage.setItem('txt5',document.js.txt5.value);
+    }
+    window.onload=function(){
+      document.js.txt5.value=sessionStorage.getItem('txt5');
+    }
+    </script>
+  </body>
+</html>

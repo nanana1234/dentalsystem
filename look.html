@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf8">
+  </head>
+  <body>
+    <form name="js">
+      <textarea type="text" value="" name="txt" style="font-size:120%;width:100%;height:820px" readonly></textarea>
+
+    <input type="button" value="反映" onclick=location.reload();></input>
+    <br>
+    <input type="text" id="fsFilename" name="filename" placeholder="ファイル名を入力"></input>
+    <input type="button" value="保存" onclick=run();></input>
+  </form>
+
+  <script type="text/javascript">
+  window.onload=function(){
+    var txt0="";
+    var txt1_n="";
+    var txt1_au="";
+    var txt1_al="";
+    var txt1_s="";
+    var txt2_b="";
+    var txt2_k="";
+    var txt2_o="";
+    var txt3_a="";
+    var txt3_b="";
+    var txt3_c="";
+    var txt3_d="";
+    var txt3_e="";
+    var txt4="";
+    var txt5="";
+    var txt6="";
+    var txt7="";
+    var txt8="";
+    var txt9="";
+    /*
+    var txt10_f="";
+    var txt10_m="";
+    var txt10_gf="";
+    var txt10_gm="";
+    var txt10_ob="";
+    var txt10_yb="";
+    var txt10_os="";
+    var txt10_ys="";
+    var txt10_s="";
+    var txt10_d="";
+    var txt10_gs="";
+    */
+    var txt10="";
+    var txt11="";
+
+    if(sessionStorage.getItem('txt0')!=null) txt0=sessionStorage.getItem('txt0');
+    if(sessionStorage.getItem('txt1_n')!=null) txt1_n=sessionStorage.getItem('txt1_n');
+    if(sessionStorage.getItem('txt1_au')!=null) txt1_au=sessionStorage.getItem('txt1_au');
+    if(sessionStorage.getItem('txt1_al')!=null) txt1_al=sessionStorage.getItem('txt1_al');
+    if(sessionStorage.getItem('txt1_s')!=null) txt1_s=sessionStorage.getItem('txt1_s');
+    if(sessionStorage.getItem('txt2_b')!=null) txt2_b=sessionStorage.getItem('txt2_b');
+    if(sessionStorage.getItem('txt2_k')!=null) txt2_k=sessionStorage.getItem('txt2_k');
+    if(sessionStorage.getItem('txt2_o')!=null) txt2_o=sessionStorage.getItem('txt2_o');
+    if(sessionStorage.getItem('txt3_a')!=null) txt3_a=sessionStorage.getItem('txt3_a');
+    if(sessionStorage.getItem('txt3_b')!=null) txt3_b=sessionStorage.getItem('txt3_b');
+    if(sessionStorage.getItem('txt3_c')!=null) txt3_c=sessionStorage.getItem('txt3_c');
+    if(sessionStorage.getItem('txt3_d')!=null) txt3_d=sessionStorage.getItem('txt3_d');
+    if(sessionStorage.getItem('txt3_e')!=null) txt3_e=sessionStorage.getItem('txt3_e');
+    if(sessionStorage.getItem('txt4')!=null) txt4=sessionStorage.getItem('txt4');
+    if(sessionStorage.getItem('txt5')!=null) txt5=sessionStorage.getItem('txt5');
+    if(sessionStorage.getItem('txt6')!=null) txt6=sessionStorage.getItem('txt6');
+    if(sessionStorage.getItem('txt7')!=null) txt7=sessionStorage.getItem('txt7');
+    if(sessionStorage.getItem('txt8')!=null) txt8=sessionStorage.getItem('txt8');
+    if(sessionStorage.getItem('txt9')!=null) txt9=sessionStorage.getItem('txt9');
+    /*
+    if(sessionStorage.getItem('txt10_f')!=null) txt10_f=sessionStorage.getItem('txt10_f');
+    if(sessionStorage.getItem('txt10_m')!=null) txt10_m=sessionStorage.getItem('txt10_m');
+    if(sessionStorage.getItem('txt10_gf')!=null) txt10_gf=sessionStorage.getItem('txt10_gf');
+    if(sessionStorage.getItem('txt10_gm')!=null) txt10_gm=sessionStorage.getItem('txt10_gm');
+    if(sessionStorage.getItem('txt10_ob')!=null) txt10_ob=sessionStorage.getItem('txt10_ob');
+    if(sessionStorage.getItem('txt10_yb')!=null) txt10_yb=sessionStorage.getItem('txt10_yb');
+    if(sessionStorage.getItem('txt10_os')!=null) txt10_os=sessionStorage.getItem('txt10_os');
+    if(sessionStorage.getItem('txt10_ys')!=null) txt10_ys=sessionStorage.getItem('txt10_ys');
+    if(sessionStorage.getItem('txt10_s')!=null) txt10_s=sessionStorage.getItem('txt10_s');
+    if(sessionStorage.getItem('txt10_d')!=null) txt10_d=sessionStorage.getItem('txt10_d');
+    if(sessionStorage.getItem('txt10_gs')!=null) txt10_gs=sessionStorage.getItem('txt10_gs');
+    */
+    if(sessionStorage.getItem('txt10')!=null) txt10=sessionStorage.getItem('txt10');
+    if(sessionStorage.getItem('txt11')!=null) txt11=sessionStorage.getItem('txt11');
+
+    document.js.txt.value="　　　　　　　　　　　　　　　　　　　　"+txt0+"\n\n\n"+
+    "【氏名・年齢】　"+txt1_n+"　"+txt1_au+txt1_al+"歳　"+txt1_s+"\n\n"+
+    "【場面設定】　"+txt2_b+"　"+txt2_k+"　"+txt2_o+"\n\n"+
+    "【主訴】　"+txt3_a+txt3_b+txt3_c+txt3_d+txt3_e+"\n\n"+
+    "【現病歴】　"+txt4+"\n\n"+
+    "【解釈モデル】　"+txt5+"\n\n"+
+    "【受療行動】　"+txt6+"\n\n"+
+    "【想定鑑別疾患】　"+txt7+"\n\n"+
+    "【既往歴】　"+txt8+"\n\n"+
+    "【患者背景】　"+txt9+"\n\n"+
+    "【家族歴】　"+txt10+"\n\n"+
+    "【演技の指針】　"+txt11;
+
+    document.js.filename.value=txt0;
+  }
+
+/*
+  function hozon(){
+  var text=document.js.txt.value;
+
+  var blob=new Blob([text],{type:"text/plain"});
+
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.target='_brank';
+  a.download="test.txt"
+  a.click();
+  URL.revokeObjectURL();
+}
+*/
+
+function AsciiToUint8Array(S) {
+      var len = S.length;
+      var P = new Uint8Array(len);
+      for (var i = 0; i < len; i++) {
+        P[i] = S[i].charCodeAt(0);
+      }
+      return P;
+    }
+
+    function SaveToFile(FileName,Stream) {
+      var bom = new Uint8Array([0xEF, 0xBB, 0xBF]);
+
+  if (window.navigator.msSaveBlob) {
+    window.navigator.msSaveBlob(new Blob([bom,Stream], { type: "text/plain" }), FileName);
+  } else {
+    var a = document.createElement("a");
+
+
+
+
+    a.href = URL.createObjectURL(new Blob([bom,Stream], { type: "text/plain" }));
+    //a.target   = '_blank';
+    a.download = FileName;
+    document.body.appendChild(a) //  FireFox specification
+    a.click();
+    document.body.removeChild(a) //  FireFox specification
+  }
+}
+
+    function run(){
+    var filename = '';
+    filename = document.getElementById("fsFilename").value;
+    var content = document.js.txt.value;
+
+  SaveToFile(filename+".doc",content);
+}
+  </script>
+  </body>
+</html>

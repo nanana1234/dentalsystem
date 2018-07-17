@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p>主訴</p>
+      <textarea type="text" value="" name="txt3" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+      <p>現病歴</p>
+      <textarea type="text" value="" name="txt4" cols="60" rows="5" style="font-size:120%;" readonly></textarea>
+    </form>
+
+  <script type="text/javascript">
+  window.onload=function(){
+    var txt3_a="";
+    var txt3_b="";
+    var txt3_c="";
+    var txt3_d="";
+    var txt3_e="";
+    var txt4="";
+
+    if(sessionStorage.getItem('txt3_a')!=null) txt3_a=sessionStorage.getItem('txt3_a');
+    if(sessionStorage.getItem('txt3_b')!=null) txt3_b=sessionStorage.getItem('txt3_b');
+    if(sessionStorage.getItem('txt3_c')!=null) txt3_c=sessionStorage.getItem('txt3_c');
+    if(sessionStorage.getItem('txt3_d')!=null) txt3_d=sessionStorage.getItem('txt3_d');
+    if(sessionStorage.getItem('txt3_e')!=null) txt3_e=sessionStorage.getItem('txt3_e');
+    if(sessionStorage.getItem('txt4')!=null) txt4=sessionStorage.getItem('txt4');
+
+    document.js.txt3.value=txt3_a+txt3_b+txt3_c+txt3_d+txt3_e+"\n\n";
+    document.js.txt4.value=txt4+"\n\n";
+  }
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <form name="js">
+      <p><font size="5">患者背景</font><br></p>
+      <div align="right"><input type="button" value="反映" onClick="javascript:parent.right.location.reload();"></div>
+      <textarea type="text" value="" onkeydown="fCopy(this.form)" onkeyup="fCopy(this.form)" name="txt9" style="font-size:120%;width:100%;height:80%" placeholder="生活習慣・職業・教育歴・家族関係・生活状況・経済的状況・心理的状況などの事です。これらが疾病の発生・治療への反応・経過に影響を与える可能性があります。飲酒・喫煙も含みます。"></textarea></p>
+      <!-- <input type="button" value="反映" onClick="sendData()"> -->
+    </form>
+    <script type="text/javascript">
+    function fCopy(frmObj){
+      sessionStorage.setItem('txt9',document.js.txt9.value);
+    }
+    window.onload=function(){
+      document.js.txt9.value=sessionStorage.getItem('txt9');
+    }
+    </script>
+  </body>
+</html>
